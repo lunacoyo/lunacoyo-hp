@@ -45,28 +45,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. 画像モーダル ---
-    const modal = document.getElementById('imageModal');
-    const modalImgPlaceholder = document.getElementById('modalImgPlaceholder');
-    const modalCaption = document.getElementById('modalCaption');
-    const closeModal = document.querySelector('.close-modal');
+ const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+const modalCaption = document.getElementById('modalCaption');
+const closeBtn = document.querySelector('.close-modal');
 
-    // 画像クリックでモーダルを開く
-    galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const thumbContent = item.querySelector('.placeholder-thumb').textContent;
-           const caption = (item.querySelector(".caption")?.textContent || "").trim();
-            const bgStyle = getComputedStyle(item.querySelector('.placeholder-thumb')).backgroundColor;
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    if (!img) return; // 画像がない枠は何もしない（movie枠の404も止まる）
 
-            // プレースホルダーの情報をモーダルにコピー（※実運用の場合は img.src をコピー）
-            modalImgPlaceholder.textContent = thumbContent;
-            modalImgPlaceholder.style.backgroundColor = bgStyle;
-            modalCaption.textContent = captionText;
-            
-            modal.classList.add('active');
-            modal.setAttribute('aria-hidden', 'false');
-            closeModal.focus(); // アクセシビリティ：フォーカス移動
-        });
+    const src = img.getAttribute('src');
+    const caption = (item.querySelector('.caption')?.textContent || '').trim();
+
+    modalImg.src = src;
+    modalImg.alt = caption || '作品画像';
+    modalCaption.textContent = caption;
+
+    modal.classList.add('is-open');     // ← CSSと合わせる
+    modal.setAttribute('aria-hidden', 'false');
+    closeBtn?.focus();
+  });
+});
+
         
         // Enterキーでも開けるように（アクセシビリティ）
         item.addEventListener('keypress', (e) => {
@@ -169,4 +170,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
   });
 });
+
 
