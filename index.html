@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルナコヨ | Official Website</title>
+    <meta name="description" content="オリジナルキャラクター「ルナ」と「コヨ」の公式ポートフォリオサイト。イラスト、漫画、動画作品の紹介。">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LUNACOYO</a>
+            <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#guide">Guide</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#sns" class="nav-btn-highlight">SNS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">ルナコヨ</h1>
+            <p class="hero-sub">静寂と喧騒。ふたりの物語。</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary">作品を見る</a>
+                <a href="#sns" class="btn btn-secondary">SNSを見る</a>
+            </div>
+        </div>
+        </header>
+
+    <main>
+        <section id="concept" class="section">
+            <div class="container">
+                <h2 class="section-title">Concept</h2>
+                <div class="concept-box fade-in">
+                    <p class="concept-text">
+                        真逆の性質を持つふたりが織りなす、<br>
+                        少し不思議で優しい日常の記録。<br>
+                        透明感のある色彩で世界を描きます。
+                    </p>
+                    <ul class="concept-list">
+                        <li>星空のような静けさと、陽だまりの暖かさ</li>
+                        <li>日常に潜む小さなファンタジー</li>
+                        <li>感情に寄り添う繊細な表情</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="section">
+            <div class="container">
+                <h2 class="section-title">Characters</h2>
+                <div class="char-grid">
+                    <article class="char-card char-luna fade-in">
+                        <div class="char-img-area">
+                            <div class="placeholder-img luna-bg">Luna Image</div>
+                        </div>
+                        <div class="char-info">
+                            <h3 class="char-name">ルナ <span class="en">Luna</span></h3>
+                            <p class="char-tag">冷静・上品・猫耳</p>
+                            <dl class="char-detail">
+                                <dt>性格</dt>
+                                <dd>物静かで理知的。少し天然。</dd>
+                                <dt>好き</dt>
+                                <dd>紅茶、雨の音、古い書物</dd>
+                                <dt>得意</dt>
+                                <dd>星読み、整理整頓</dd>
+                            </dl>
+                            <p class="char-quote">「静かな夜は、物語を紡ぐのに最適ですわ。」</p>
+                        </div>
+                    </article>
+
+                    <article class="char-card char-coyo fade-in">
+                        <div class="char-img-area">
+                            <div class="placeholder-img coyo-bg">Coyo Image</div>
+                        </div>
+                        <div class="char-info">
+                            <h3 class="char-name">コヨ <span class="en">Coyo</span></h3>
+                            <p class="char-tag">元気・活発・狐耳</p>
+                            <dl class="char-detail">
+                                <dt>性格</dt>
+                                <dd>天真爛漫で好奇心旺盛。</dd>
+                                <dt>好き</dt>
+                                <dd>甘いお菓子、昼寝、高い所</dd>
+                                <dt>得意</dt>
+                                <dd>かけっこ、人を楽しませること</dd>
+                            </dl>
+                            <p class="char-quote">「ねえねえ！あっちに面白そうなものがあるよ！」</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="illust">イラスト</button>
+                    <button class="filter-btn" data-filter="comic">漫画</button>
+                    <button class="filter-btn" data-filter="movie">動画</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="illust" tabindex="0">
+                        <div class="placeholder-thumb">Illust 01</div>
+                        <div class="caption">春の訪れ</div>
+                    </div>
+                    <div class="gallery-item" data-category="illust" tabindex="0">
+                        <div class="placeholder-thumb">Illust 02</div>
+                        <div class="caption">夜空と紅茶</div>
+                    </div>
+                    <div class="gallery-item" data-category="comic" tabindex="0">
+                        <div class="placeholder-thumb">Comic 01</div>
+                        <div class="caption">はじめての出会い</div>
+                    </div>
+                    <div class="gallery-item" data-category="illust" tabindex="0">
+                        <div class="placeholder-thumb">Illust 03</div>
+                        <div class="caption">夏の日差し</div>
+                    </div>
+                    <div class="gallery-item" data-category="movie" tabindex="0">
+                        <div class="placeholder-thumb">Movie 01</div>
+                        <div class="caption">PV: 星の旅</div>
+                    </div>
+                    <div class="gallery-item" data-category="comic" tabindex="0">
+                        <div class="placeholder-thumb">Comic 02</div>
+                        <div class="caption">おやつの時間</div>
+                    </div>
+                    <div class="gallery-item" data-category="illust" tabindex="0">
+                        <div class="placeholder-thumb">Illust 04</div>
+                        <div class="caption">秋の読書</div>
+                    </div>
+                    <div class="gallery-item" data-category="movie" tabindex="0">
+                        <div class="placeholder-thumb">Movie 02</div>
+                        <div class="caption">Short: 挨拶</div>
+                    </div>
+                    <div class="gallery-item" data-category="illust" tabindex="0">
+                        <div class="placeholder-thumb">Illust 05</div>
+                        <div class="caption">冬の暖炉</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="section bg-glass">
+            <div class="container">
+                <h2 class="section-title">Story</h2>
+                <div class="story-content fade-in">
+                    <div class="story-block">
+                        <h3>境界の街</h3>
+                        <p>夜と朝が交差する不思議な街で、ふたりは暮らしています。そこは時間がゆっくりと流れる場所。</p>
+                    </div>
+                    <div class="story-block">
+                        <h3>対照的なふたり</h3>
+                        <p>冷静なルナと、情熱的なコヨ。正反対だからこそ、お互いに無いものを補い合っています。</p>
+                    </div>
+                    <div class="story-block">
+                        <h3>終わらない旅</h3>
+                        <p>新しい発見を求めて。ふたりの小さな冒険は、今日もどこかで続いていきます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guide" class="section">
+            <div class="container">
+                <h2 class="section-title">Guide</h2>
+                <div class="guide-wrapper">
+                    <div class="guide-card ok-card">
+                        <h3>依頼・相談 OK</h3>
+                        <ul>
+                            <li>SNSアイコン・ヘッダー作成</li>
+                            <li>動画用サムネイル</li>
+                            <li>一枚絵の制作（要相談）</li>
+                            <li>キャラクターコラボ</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card ng-card">
+                        <h3>禁止事項 NG</h3>
+                        <ul>
+                            <li>作品の無断転載・再配布</li>
+                            <li>自作発言 / トレース</li>
+                            <li>AI学習への利用</li>
+                            <li>公序良俗に反する利用</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="credit-note">
+                    ※ 作品をご利用の際は、必ずクレジット（@Lunacoyo_Sample）の記載をお願いします。
+                </p>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title">FAQ</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-question">個人からの依頼は受け付けていますか？</summary>
+                        <div class="faq-answer">はい、受け付けています。スケジュールによりますので、まずはご相談ください。</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">納期の目安はどのくらいですか？</summary>
+                        <div class="faq-answer">アイコン等は2週間〜、一枚絵は1ヶ月〜が目安です。お急ぎの場合は別途ご相談ください。</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">修正は何回まで無料ですか？</summary>
+                        <div class="faq-answer">ラフ段階で2回まで無料です。清書後の大幅な修正は追加料金を頂戴します。</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">SNS以外（動画や配信）で使用できますか？</summary>
+                        <div class="faq-answer">はい、収益化済みのチャンネルでもご利用可能です。商用利用の範囲については事前に確認させてください。</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">料金の目安を知りたいです。</summary>
+                        <div class="faq-answer">ご依頼内容により異なります。SNS等の固定ツイートに料金表を掲載していますのでご参照ください。</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">連絡手段は何がありますか？</summary>
+                        <div class="faq-answer">X（旧Twitter）のDM、または以下のメールフォームよりご連絡ください。</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="sns" class="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact & Follow</h2>
+            <p class="footer-msg">最新情報や日々のイラストはSNSで発信しています。</p>
+            
+            <div class="sns-links">
+                <a href="#" class="sns-icon" aria-label="X (Twitter)">X</a>
+                <a href="#" class="sns-icon" aria-label="Instagram">IG</a>
+                <a href="#" class="sns-icon" aria-label="TikTok">TT</a>
+                <a href="#" class="sns-icon" aria-label="YouTube">YT</a>
+                <a href="#" class="sns-icon" aria-label="note">note</a>
+            </div>
+
+            <div class="contact-area">
+                <a href="mailto:sample@example.com" class="btn btn-primary contact-btn">メールで問い合わせる</a>
+            </div>
+
+            <small class="copyright">&copy; 2024 Lunacoyo Project. All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-modal" tabindex="0" role="button" aria-label="閉じる">&times;</span>
+            <div class="modal-img-container">
+                <div id="modalImgPlaceholder" class="placeholder-thumb large"></div> 
+                <p id="modalCaption"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
