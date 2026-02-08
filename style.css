@@ -692,3 +692,13 @@ details[open] .faq-question::after {
   object-fit: cover;      /* 余白ゼロで埋める（少しトリミング） */
   display: block;
 }
+#modalImg{
+  max-width: 90vw;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
