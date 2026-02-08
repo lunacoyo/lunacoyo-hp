@@ -113,4 +113,59 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+});
+// ===== Gallery Modal: show real images =====
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalCaption = document.getElementById("modalCaption");
+  const closeBtn = document.querySelector(".close-modal");
+
+  if (!modal || !modalImg || !modalCaption) return;
+
+  const openModal = (src, caption) => {
+    modalImg.src = src;
+    modalImg.alt = caption || "作品画像";
+    modalCaption.textContent = caption || "";
+    modal.setAttribute("aria-hidden", "false");
+    modal.classList.add("is-open");
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    modalImg.src = "";
+  };
+
+  // クリック/Enterで開く
+  document.querySelectorAll(".gallery-item").forEach((item) => {
+    const open = () => {
+      // gallery-item内のimgを優先
+      const img = item.querySelector("img");
+      const src = img?.getAttribute("src") || item.getAttribute("data-img");
+      const caption = item.querySelector(".caption")?.textContent?.trim() || "";
+
+      if (!src) return; // 画像がない枠は何もしない
+      openModal(src, caption);
+    };
+
+    item.addEventListener("click", open);
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") open();
+    });
+  });
+
+  // 閉じるボタン
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+  // 背景クリックで閉じる（modal-content以外）
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escで閉じる
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+  });
 });
