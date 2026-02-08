@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
             const thumbContent = item.querySelector('.placeholder-thumb').textContent;
-            const captionText = item.querySelector('.caption').textContent;
+           const caption = (item.querySelector(".caption")?.textContent || "").trim();
             const bgStyle = getComputedStyle(item.querySelector('.placeholder-thumb')).backgroundColor;
 
             // プレースホルダーの情報をモーダルにコピー（※実運用の場合は img.src をコピー）
@@ -169,3 +169,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
   });
 });
+
