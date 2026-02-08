@@ -672,4 +672,23 @@ details[open] .faq-question::after {
     .guide-wrapper {
         grid-template-columns: 1fr;
     }
+
+}
+/* Characters の画像枠を「比率固定」にして、画像をピッタリ埋める */
+.char-img-area{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* ← 好みで変えてOK（4/3 や 1/1） */
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.06);
+}
+
+.char-img-area .char-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;      /* 余白ゼロで埋める（少しトリミング） */
+  display: block;
 }
