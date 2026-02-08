@@ -3,15 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ルナコヨ | Official Website</title>
     <meta name="description" content="オリジナルキャラクター「ルナ」と「コヨ」の公式ポートフォリオサイト。イラスト、漫画、動画作品の紹介。">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lunacoyo.github.io/lunacoyo-hp/">
+
+    <!-- OGP -->
+    <meta property="og:title" content="ルナコヨ | Official Website">
+    <meta property="og:description" content="オリジナルキャラクター「ルナ」と「コヨ」の公式ポートフォリオサイト。イラスト、漫画、動画作品の紹介。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lunacoyo.github.io/lunacoyo-hp/">
+    <!-- ↓ OGP画像を用意したら有効になる（images/ogp.png をアップロード） -->
+    <meta property="og:image" content="https://lunacoyo.github.io/lunacoyo-hp/images/ogp.png">
+
+    <!-- X(Twitter) Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ルナコヨ | Official Website">
+    <meta name="twitter:description" content="オリジナルキャラクター「ルナ」と「コヨ」の公式ポートフォリオサイト。">
+    <meta name="twitter:image" content="https://lunacoyo.github.io/lunacoyo-hp/images/ogp.png">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Favicon（favicon.ico をルートに置けばOK） -->
+    <link rel="icon" href="favicon.ico">
+    <!-- もしPNGで置くなら： <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">LUNACOYO</a>
+            <a href="#" class="logo" aria-label="トップへ戻る">LUNACOYO</a>
             <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -38,7 +64,7 @@
                 <a href="#sns" class="btn btn-secondary">SNSを見る</a>
             </div>
         </div>
-        </header>
+    </header>
 
     <main>
         <section id="concept" class="section">
@@ -65,6 +91,7 @@
                 <div class="char-grid">
                     <article class="char-card char-luna fade-in">
                         <div class="char-img-area">
+                            <!-- 画像を入れるなら：images/luna.png をアップして、下を img に置換OK -->
                             <div class="placeholder-img luna-bg">Luna Image</div>
                         </div>
                         <div class="char-info">
@@ -84,6 +111,7 @@
 
                     <article class="char-card char-coyo fade-in">
                         <div class="char-img-area">
+                            <!-- 画像を入れるなら：images/coyo.png をアップして、下を img に置換OK -->
                             <div class="placeholder-img coyo-bg">Coyo Image</div>
                         </div>
                         <div class="char-info">
@@ -107,7 +135,7 @@
         <section id="gallery" class="section">
             <div class="container">
                 <h2 class="section-title">Gallery</h2>
-                
+
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="illust">イラスト</button>
@@ -115,40 +143,46 @@
                     <button class="filter-btn" data-filter="movie">動画</button>
                 </div>
 
+                <!--
+                  画像を使う場合：
+                  - images/ にアップロード
+                  - 各 gallery-item に data-img="images/xxx.jpg" を入れておくと後でJS拡張しやすい
+                  今は既存 script.js を壊さないため、placeholder構造は維持しています
+                -->
                 <div class="gallery-grid">
-                    <div class="gallery-item" data-category="illust" tabindex="0">
+                    <div class="gallery-item" data-category="illust" tabindex="0" data-img="images/illust1.jpg" data-alt="春の訪れ（イラスト）">
                         <div class="placeholder-thumb">Illust 01</div>
                         <div class="caption">春の訪れ</div>
                     </div>
-                    <div class="gallery-item" data-category="illust" tabindex="0">
+                    <div class="gallery-item" data-category="illust" tabindex="0" data-img="images/illust2.jpg" data-alt="夜空と紅茶（イラスト）">
                         <div class="placeholder-thumb">Illust 02</div>
                         <div class="caption">夜空と紅茶</div>
                     </div>
-                    <div class="gallery-item" data-category="comic" tabindex="0">
+                    <div class="gallery-item" data-category="comic" tabindex="0" data-img="images/comic1.jpg" data-alt="はじめての出会い（漫画）">
                         <div class="placeholder-thumb">Comic 01</div>
                         <div class="caption">はじめての出会い</div>
                     </div>
-                    <div class="gallery-item" data-category="illust" tabindex="0">
+                    <div class="gallery-item" data-category="illust" tabindex="0" data-img="images/illust3.jpg" data-alt="夏の日差し（イラスト）">
                         <div class="placeholder-thumb">Illust 03</div>
                         <div class="caption">夏の日差し</div>
                     </div>
-                    <div class="gallery-item" data-category="movie" tabindex="0">
+                    <div class="gallery-item" data-category="movie" tabindex="0" data-img="images/movie1.jpg" data-alt="PV: 星の旅（動画）">
                         <div class="placeholder-thumb">Movie 01</div>
                         <div class="caption">PV: 星の旅</div>
                     </div>
-                    <div class="gallery-item" data-category="comic" tabindex="0">
+                    <div class="gallery-item" data-category="comic" tabindex="0" data-img="images/comic2.jpg" data-alt="おやつの時間（漫画）">
                         <div class="placeholder-thumb">Comic 02</div>
                         <div class="caption">おやつの時間</div>
                     </div>
-                    <div class="gallery-item" data-category="illust" tabindex="0">
+                    <div class="gallery-item" data-category="illust" tabindex="0" data-img="images/illust4.jpg" data-alt="秋の読書（イラスト）">
                         <div class="placeholder-thumb">Illust 04</div>
                         <div class="caption">秋の読書</div>
                     </div>
-                    <div class="gallery-item" data-category="movie" tabindex="0">
+                    <div class="gallery-item" data-category="movie" tabindex="0" data-img="images/movie2.jpg" data-alt="Short: 挨拶（動画）">
                         <div class="placeholder-thumb">Movie 02</div>
                         <div class="caption">Short: 挨拶</div>
                     </div>
-                    <div class="gallery-item" data-category="illust" tabindex="0">
+                    <div class="gallery-item" data-category="illust" tabindex="0" data-img="images/illust5.jpg" data-alt="冬の暖炉（イラスト）">
                         <div class="placeholder-thumb">Illust 05</div>
                         <div class="caption">冬の暖炉</div>
                     </div>
@@ -200,7 +234,7 @@
                     </div>
                 </div>
                 <p class="credit-note">
-                    ※ 作品をご利用の際は、必ずクレジット（@Lunacoyo_Sample）の記載をお願いします。
+                    ※ 作品をご利用の際は、必ずクレジット（@YOUR_LUNACOYO_ID）の記載をお願いします。
                 </p>
             </div>
         </section>
@@ -227,11 +261,11 @@
                     </details>
                     <details class="faq-item">
                         <summary class="faq-question">料金の目安を知りたいです。</summary>
-                        <div class="faq-answer">ご依頼内容により異なります。SNS等の固定ツイートに料金表を掲載していますのでご参照ください。</div>
+                        <div class="faq-answer">ご依頼内容により異なります。SNS等の固定投稿に料金表を掲載している場合はそちらをご案内ください。</div>
                     </details>
                     <details class="faq-item">
                         <summary class="faq-question">連絡手段は何がありますか？</summary>
-                        <div class="faq-answer">X（旧Twitter）のDM、または以下のメールフォームよりご連絡ください。</div>
+                        <div class="faq-answer">X（旧Twitter）のDM、または以下のメールよりご連絡ください。</div>
                     </details>
                 </div>
             </div>
@@ -242,17 +276,19 @@
         <div class="container">
             <h2 class="footer-title">Contact & Follow</h2>
             <p class="footer-msg">最新情報や日々のイラストはSNSで発信しています。</p>
-            
+
             <div class="sns-links">
-                <a href="#" class="sns-icon" aria-label="X (Twitter)">X</a>
-                <a href="#" class="sns-icon" aria-label="Instagram">IG</a>
-                <a href="#" class="sns-icon" aria-label="TikTok">TT</a>
-                <a href="#" class="sns-icon" aria-label="YouTube">YT</a>
-                <a href="#" class="sns-icon" aria-label="note">note</a>
+                <a href=href="https://x.com/lunacoyo_
+ class="sns-icon" aria-label="X (Twitter)" target="_blank" rel="noopener">X</a>
+                <a href=href="https://www.instagram.com/luna.coyo"
+ class="sns-icon" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+                <a href="YOUR_TIKTOK_URL" class="sns-icon" aria-label="TikTok" target="_blank" rel="noopener">TT</a>
+                <a href="YOUR_YOUTUBE_URL" class="sns-icon" aria-label="YouTube" target="_blank" rel="noopener">YT</a>
+                <a href="YOUR_NOTE_URL" class="sns-icon" aria-label="note" target="_blank" rel="noopener">note</a>
             </div>
 
             <div class="contact-area">
-                <a href="mailto:sample@example.com" class="btn btn-primary contact-btn">メールで問い合わせる</a>
+                <a href="mailto:YOUR_EMAIL@example.com" class="btn btn-primary contact-btn">メールで問い合わせる</a>
             </div>
 
             <small class="copyright">&copy; 2024 Lunacoyo Project. All Rights Reserved.</small>
@@ -263,7 +299,7 @@
         <div class="modal-content">
             <span class="close-modal" tabindex="0" role="button" aria-label="閉じる">&times;</span>
             <div class="modal-img-container">
-                <div id="modalImgPlaceholder" class="placeholder-thumb large"></div> 
+                <div id="modalImgPlaceholder" class="placeholder-thumb large"></div>
                 <p id="modalCaption"></p>
             </div>
         </div>
