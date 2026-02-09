@@ -50,9 +50,14 @@ const modalImg = document.getElementById('modalImg');
 const modalCaption = document.getElementById('modalCaption');
 const closeBtn = document.querySelector('.close-modal');
 
+
+    const img = item.querySelector('img');// --- 3. 画像モーダル（いったん無効化：エラー回避） ---
 galleryItems.forEach(item => {
   item.addEventListener('click', () => {
-    const img = item.querySelector('img');
+    // 何もしない（拡大は後で）
+  });
+});
+
     if (!img) return; // 画像がない枠は何もしない（movie枠の404も止まる）
 
     const src = img.getAttribute('src');
@@ -170,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
   });
 });
+
 
 
 
